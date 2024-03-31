@@ -62,15 +62,7 @@
 
                                     </tbody>
                                 </table>
-                                {{-- @foreach ($books as $b )
-                                <div class="form-check">
-                                    <input class="form-check-input" value="{{$b->id}}" type="checkbox"
-                                        id="gridCheck{{$b->id}}" name="books[]">
-                                    <label class="form-check-label" for="gridCheck{{$b->id}}">
-                                        {{$b->name}} ------------- {{$b->rental_fee}} KS
-                                    </label>
-                                </div>
-                                @endforeach --}}
+
                                 @error('books')
                                 <p class="text-danger mt-2">{{$message}}</p>
                                 @enderror
@@ -87,7 +79,7 @@
                 <div class="card">
                     <div class="card-body py-4">
                         <div class="pt-4 pb-2">
-                            <h5 class="card-title text-center pb-0 fs-4">Books Availability</h5>
+                            <h5 class="card-title text-center pb-0 fs-4">Books temporary unavailable</h5>
 
                         </div>
                         <!-- Table with stripped rows -->
