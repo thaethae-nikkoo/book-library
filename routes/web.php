@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [pagesController::class,"login"])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class,"login"])->middleware('guest');
 Route::middleware(Librarian::class)->group(function () {
-    Route::get('/home', [pagesController::class,"home"]);
-    Route::get('/', [pagesController::class,"home"]);
+    Route::get('/home', [pagesController::class,"login"]);
+    Route::get('/', [pagesController::class,"login"]);
     Route::get('/logout', [AuthController::class,"logout"]);
     Route::resource('members', UserController::class);
     Route::resource('books', BooksController::class);
